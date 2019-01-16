@@ -36,8 +36,14 @@ public virtual XhtmlString MainBody { get; set; }
         [Display(GroupName = GroupNames.SiteSettings, Order = 300)]
         public virtual string SitePhone { get; set; }
 
+        [Display(GroupName = GroupNames.SiteSettings, Order = 400)]
+        [AllowedTypes(typeof(ImageData))]
+        public virtual ContentReference SiteBackgroundImage { get; set; }
+
         [Display(GroupName = GroupNames.SiteSettings, Order = 1400)]
         public virtual string SiteFooter { get; set; }
+
+
 
         #endregion
     }

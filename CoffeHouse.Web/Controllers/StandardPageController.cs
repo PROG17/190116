@@ -9,14 +9,13 @@ using EPiServer.Web.Mvc;
 
 namespace CoffeHouse.Web.Controllers
 {
-    public class StandardPageController : PageController<StandardPage>
+    public class StandardPageController : SitePageController<StandardPage>
     {
         public ActionResult Index(StandardPage currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
+            var model = BuildViewModel(currentPage);
 
-            return View(currentPage);
+            return View(model);
         }
     }
 }

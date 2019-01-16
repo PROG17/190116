@@ -12,10 +12,14 @@ namespace CoffeHouse.Web.Models.ViewModels
 
         public StartPage StartPage { get; }
 
+        public IList<SitePageBase> TopMenu { get; set; }
+
         public PageViewModel(T currentPage, StartPage startPage)
         {
             CurrentPage = currentPage;
             StartPage = startPage;
+
+            
         }
     }
 }
